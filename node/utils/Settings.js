@@ -145,10 +145,7 @@ if(process.env.VCAP_APP_PORT) {
 var vcap_services = process.env.VCAP_SERVICES;
 
 if(vcap_services) {
-<<<<<<< HEAD
   console.log("env VCAP_SERVICES:" + console.dir(vcap_services))
-=======
->>>>>>> origin/cf-support
   var svcs = JSON.parse(vcap_services)
   for(var key in svcs ) {
     var svc = svcs[key]
@@ -163,10 +160,6 @@ if(vcap_services) {
         "database" : cred.name ,
       };
     }
-<<<<<<< HEAD
     console.log("database setup:" + console.dir(exports.dbSettings))
-=======
-    console.debug("database setup:" + console.dir(exports.dbSettings))
->>>>>>> origin/cf-support
   }
 }
